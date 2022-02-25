@@ -7,9 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="sample.jpg">
-    <P>初期設定</P>
-    <P>初期設定</P>
+    
+    <P>
+        QRコードページ
+        <form>
+            車種名:<input type="text" id="nameText" placeholder="車種名を入力して下さい">
+            <img id="imageFile" src=""/>
+
+            <input type="button" onclick="sampleing1()" value="QRコードを表示します">
+
+    </P>
+    <script>
+        function sampleing1(){
+            img = document.getElementById("imageFile")
+            nameText = document.getElementById("nameText")
+            img.src = "image/"+nameText.value + ".jpg"
+        }
+
+        let nameText = document.getElementById("nameText");
+
+        let checkButton = document.getElementById("checkButton");
+        checkButton.addEventListener('click', buttonClick);
+        </script>
+   
 
     
 </body>
